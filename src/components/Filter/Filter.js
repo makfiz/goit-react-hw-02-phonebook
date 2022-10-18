@@ -1,6 +1,6 @@
 
 import { FilterWraper } from 'components/Filter/Filter.styled'
-import { maxWidth } from 'styled-system'
+
 
 
 const Filter = ({ value, onChange}) => {
