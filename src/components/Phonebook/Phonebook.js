@@ -23,8 +23,9 @@ class Phonebook extends Component {
               return "yes"
           }
           return 'no'
-        })
-        if (alreadyInContacts[0] === "yes") return
+      })
+        
+        if (alreadyInContacts.includes("yes")) return
         else {
             this.setState(prevState => {
                 const contact = { id: shortid.generate(), name: data.name, number: data.number }
