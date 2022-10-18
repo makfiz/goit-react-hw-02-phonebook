@@ -20,11 +20,11 @@ class Phonebook extends Component {
       const alreadyInContacts =  this.state.contacts.map(contact => {
           if (contact.name.toLowerCase() === data.name.toLowerCase()) {
               alert(`${contact.name} is already in contacts.`)
-              return "nope"
+              return "True"
           }
-          return 
+          return 'False'
         })
-        if (alreadyInContacts[0] === "nope") return
+        if (alreadyInContacts[0] === "True") return
         else {
             this.setState(prevState => {
                 const contact = { id: shortid.generate(), name: data.name, number: data.number }
